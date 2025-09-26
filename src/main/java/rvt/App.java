@@ -1,20 +1,17 @@
 package rvt;
+import java.util.Random;
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Passwrd?");
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
-        String pass = reader.nextLine();
-        String password = "Caput Draconis";
+        int res = random.nextInt(6) + 1;
+        System.out.println(res);
 
-        if (pass.equals(password)) {
-            System.out.println("Welcome!");
-        } else {
-            System.out.println("Off with you! ");
-        }
 
-        reader.close();
+        scanner.close();
     }
-
 }
+
+
