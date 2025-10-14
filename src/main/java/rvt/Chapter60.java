@@ -7,6 +7,10 @@ public class Chapter60 {
        ex2();
        System.out.println();
        ex3();
+       System.out.println();
+       ex4();
+       System.out.println();
+       ex5();
     }
 
     public static void ex1() {
@@ -50,7 +54,9 @@ public class Chapter60 {
         int[] valA   = { 13, -22,  82,  17}; 
         int[] valB   = {  0,   0,   0,   0};
 
-        
+        for(int i = 0; i < valA.length;i++){
+            valB[i] = 25 - valA[i];
+        }
  
     System.out.println( "valA: " + valA[0] + " " + valA[1] + " " + valA[2] + " " + valA[3] );
  
@@ -61,6 +67,19 @@ public class Chapter60 {
     }
 
     public static void ex5() {
+        int[] val = {0, 1, 2, 3}; 
+        int temp;
+ 
+    System.out.println( "Original Array: " + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
 
+        temp = val[0];
+        val[0] = val[3];
+        val[3] = temp;
+
+        temp = val[1];
+        val[1] = val[2];
+        val[2] = temp;
+        
+    System.out.println( "Reversed Array: " + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
     }
 }
